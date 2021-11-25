@@ -1,0 +1,106 @@
+#include <iostream>
+#include <math.h>
+#include <cmath>
+using namespace std;
+void main() {
+    cout << "Calculator" << endl << endl; 
+    cout << "choose operation:" << endl;
+    cout << "[+] - addition\n[-] - substraction\n[*] - multiplication\n[/] - division\n[1] - the root of the number\n[%] - the remainder of the division\n[2] - sin\n[3] - cos\n[4] - tan\n[5] - exponentiation\n[6] - cube root of the number" << endl;
+    cout << "Enter your operation: ";
+    char operation;
+    float num1, num2, result;
+    short rnum1, rnum2, rresult; // резервные перменные для операций где нужен целочисленный тип данных
+    cin >> operation;
+    if (operation == '+') {
+        cout << "Your choise is addition\nEnter your numbers" << endl;
+        cout << "Enter first number:";
+        cin >> num1;
+        cout << "Enter second number:";
+        cin >> num2;
+        result = num1 + num2;
+        cout << "Result equals:" << result << endl;
+
+    }
+    else if (operation == '-') {
+        cout << "Your choise is substraction\nEnter your numbers" << endl;
+        cout << "Enter first number:";
+        cin >> num1;
+        cout << "Enter second number:";
+        cin >> num2;
+        result = num1 - num2;
+        cout << "Result equals:" << result << endl;
+    }
+    else if (operation == '*') {
+        cout << "Your choise is multiplication\nEnter your numbers" << endl;
+        cout << "Enter first number:";
+        cin >> num1;
+        cout << "Enter second number:";
+        cin >> num2;
+        result = num1 * num2;
+        cout << "Result equals:" << result << endl;
+    }
+    else if (operation == '/') {
+        cout << "Your choise is division\nEnter your numbers" << endl;
+        cout << "Enter first number:";
+        cin >> num1;
+        cout << "Enter second number:";
+        cin >> num2;
+        result = num1 / num2;
+        cout << "Result equals:" << result << endl;
+    }
+    else if (operation == '1') {
+        cout << "Your choise is the root of the number\nEnter your number" << endl;
+        cout << "Your number:";
+        cin >> num1;
+        result = sqrt(num1);
+        cout << "Result equals:" << result << endl;
+    }
+    else if (operation == '%') {
+        cout << "Your choise is the remainder of the division\nEnter your numbers" << endl;
+        cout << "Enter first number:";
+        cin >> rnum1;
+        cout << "Enter second number:";
+        cin >> rnum2;
+        rresult = rnum1 % rnum2;
+        cout << "Result equals" << rresult << endl;
+    }
+    else if (operation == '2') {
+        cout << "Your choise is sin\nEnter your number" << endl;
+        cout << "Enter your number:";
+        cin >> num1;
+        result = sin(num1);
+        cout << "Result equals:" << result << endl;
+    }
+    else if (operation == '3') {
+        cout << "Your choise is cos\nEnter your number" << endl;
+        cout << "Enter your number:";
+        cin >> num1;
+        result = cos(num1);
+        cout << "Result equals:" << result << endl;
+    }
+    else if (operation == '4') {
+        cout << "Your choise is tan\nEnter your number" << endl;
+        cout << "Enter your number:";
+        cin >> num1;
+        result = tan(num1);
+        cout << "Result equals:" << result << endl;
+    }
+    else if (operation == '5') {
+        cout << "Your choise is exponentiation\nEnter your numbers" << endl;
+        cout << "Enter your first number:";
+        cin >> num1;
+        cout << "Enter your second number:";
+        cin >> num2;
+        result = pow(num1, num2);
+    }
+    else if (operation == '6') {
+        cout << "Your choise is the cube root of the number\nEnter your number" << endl;
+        cout << "Enter your number:";
+        cin >> num1;
+        result = cbrt(num1);
+        cout << "Result equals:" << result << endl;
+    }
+    else {
+        cout << "You`re enter wrong number of operation, please try again" << endl;
+    }
+}
